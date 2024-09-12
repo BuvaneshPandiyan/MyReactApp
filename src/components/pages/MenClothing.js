@@ -8,7 +8,7 @@ const MenClothing = () => {
     // Fetch data from the API
     const fetchData = async () => {
       try {
-        const response = await fetch('https://2241-183-82-204-203.ngrok-free.app/api/items'); // Replace with your API endpoint
+        const response = await fetch('https://2241-183-82-204-203.ngrok-free.app/api/clothing-items'); // Replace with your API endpoint
         const data = await response.json();
         // Filter items by category 'Men'
         const menItems = data.filter(item => item.category === 'Men');
