@@ -20,7 +20,6 @@
   border-radius: 50%;
   margin-right: 10px;
   background-size: contain;
-  
 }
 
 .brand-name {
@@ -88,7 +87,57 @@
 .cart-icon {
   font-size: 1.5rem;
 }
-.cart-icon:hover{
+
+.cart-icon:hover {
   transform: scale(1.35);
 }
 
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Ensure items stay in one line */
+    padding: 5px 10px; /* Adjust padding for mobile */
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+  }
+
+  .logo {
+    display: none; /* Hide logo on mobile */
+  }
+
+  .brand-name {
+    font-size: 1rem; /* Reduce font size on mobile */
+    margin-right: 10px; /* Adjust margin */
+    /* Change brand name to "UB" */
+    content: "UB";
+  }
+
+  .search-container {
+    display: flex;
+    flex: 1; /* Allow it to take available space */
+    justify-content: center;
+  }
+
+  .search-input {
+    width: 60%; /* Adjust width to fit within the navbar */
+    margin-right: 0; /* Remove margin */
+  }
+
+  .search-button {
+    display: none; /* Hide search button on mobile */
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    gap: 10px; /* Space between items */
+  }
+
+  .signin-button {
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .cart-link {
+    margin-left: auto; /* Push cart icon to the end */
+  }
+}
