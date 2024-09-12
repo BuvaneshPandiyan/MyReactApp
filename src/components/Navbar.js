@@ -35,7 +35,7 @@ const Navbar = ({ onSearch }) => {
       <nav className="navbar">
         <div className="navbar-left">
           <div className="logo"></div>
-          <span className="brand-name">U/T</span>
+          <span className="brand-name">UrbanThreads</span>
         </div>
         <div className="search-container">
           <input
