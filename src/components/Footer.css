@@ -1,14 +1,11 @@
-/* Footer.css */
-
 /* Footer container styles */
 .footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Change to column direction */
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
   background: linear-gradient(to right, #4a90e2 17%, #e94e77 100%);
   color: white;
-  flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
 }
 
 /* Footer content styles */
@@ -28,13 +25,20 @@
 }
 
 .footer-brand-name {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
+  margin-right: 20px;
+}
+
+.footer-center {
+  text-align: center; /* Center the content */
+  margin-bottom: 10px; /* Space below center content */
 }
 
 .footer-links {
   display: flex;
   gap: 15px;
+  justify-content: center; /* Center the links */
 }
 
 .footer-link {
@@ -55,10 +59,18 @@
   border: none;
   color: white;
   cursor: pointer;
+  font-size: 1em;
+  margin-left: 20px;
 }
 
 .footer-right {
   font-size: 0.8em;
+}
+
+/* New copyright section */
+.footer-copyright {
+  font-size: 0.8em;
+  margin-top: 10px;
 }
 
 /* Modal overlay styles */
@@ -121,33 +133,38 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column; /* Stack items vertically */
-    text-align: center; /* Center text */
+    padding: 10px 5px;
   }
 
   .footer-left, .footer-right {
-    margin-bottom: 10px; /* Add spacing between sections */
+    flex: 1;
+    justify-content: center;
   }
 
   .footer-logo {
-    margin: 0 auto 10px; /* Center logo horizontally */
+    display: none;
   }
 
   .footer-brand-name {
-    font-size: 1.2em; /* Adjust font size for smaller screens */
+    font-size: 1.2em;
   }
 
   .footer-links {
-    flex-direction: row; /* Stack links vertically */
-    gap: 10px; /* Adjust gap between links */
-    margin-bottom: 10px; /* Add spacing below links */
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 0;
   }
 
   .footer-link {
-    font-size: 0.9em; /* Adjust font size for smaller screens */
+    font-size: 0.9em;
   }
-  
+
   .footer-right {
-    font-size: 0.7em; /* Adjust font size for smaller screens */
+    font-size: 0.8em;
+  }
+
+  .footer-copyright {
+    font-size: 0.8em;
+    margin-top: 10px;
   }
 }
