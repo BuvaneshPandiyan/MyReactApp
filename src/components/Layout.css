@@ -1,0 +1,68 @@
+/* Layout.css */
+
+/* Style for the header */
+header.layout-content {
+    background-color: #ffffff; /* White background color */
+    padding: 15px 20px; /* Padding around the content */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the content horizontally */
+    border-bottom: 2px solid #D3D3D3; /* Light gray border for separation */
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Container for the navbar content */
+.layout-content {
+    display: flex; /* Align items in a row */
+    gap: 20px; /* Space between links */
+    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+    justify-content: flex-start; /* Align items to the start of the container */
+    overflow-x: auto; /* Enable horizontal scrolling when needed */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    white-space: nowrap; /* Prevent line breaks within items */
+    width: 100%; /* Ensure it takes full width of the parent container */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.layout-content::-webkit-scrollbar {
+    display: none; /* Hides scrollbar */
+}
+
+/* Hide scrollbar for Firefox */
+.layout-content {
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+/* Style for navbar links */
+.layout-brand {
+    color: #4a90e2; /* Blue color for text */
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Font size for links */
+    transition: color 0.3s, transform 0.3s; /* Smooth color transition on hover */
+    display: inline-block; /* Ensure links are inline and fit within flex container */
+}
+
+/* Hover effect for navbar links */
+.layout-brand:hover {
+    color: #e94e77; /* Darker pink for hover effect */
+    transform: scale(1.25); /* Slight zoom effect */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header.layout-content {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .layout-content {
+        flex-direction: row; /* Keep items in a row layout on smaller screens */
+        gap: 10px; /* Reduce space between links on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Additional adjustments for very small screens, if needed */
+    .layout-brand {
+        font-size: 16px; /* Adjust font size for very small screens */
+    }
+}

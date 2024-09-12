@@ -1,0 +1,94 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #4a90e2 17%, #e94e77 100%);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  background: url('./UrbanThreadsLogo.png') no-repeat center center;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-size: contain;
+  
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.search-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.search-button:hover {
+  background-color: #357abd;
+  transform: scale(1.20);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.signin-button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.signin-button:hover {
+  background-color: #357abd;
+  transform: scale(1.20);
+  text-decoration: none;
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+}
+.cart-icon:hover{
+  transform: scale(1.35);
+}
+

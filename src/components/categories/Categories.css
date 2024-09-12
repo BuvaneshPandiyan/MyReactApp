@@ -1,0 +1,112 @@
+/* Container settings */
+.container.marketing {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Flex container for the row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center-align cards horizontally */
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Horizontal layout for image, description, and button */
+.horizontal-card {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center-align content horizontally */
+  width: 100%; /* Full width */
+  max-width: 400px; /* Increased max-width for wider cards */
+  padding: 20px;
+  margin-bottom: 20px; /* Space between cards */
+  border: 1px solid #ddd; /* Add border for card effect */
+  border-radius: 15px; /* Rounded corners */
+  background-color: #fff; /* White background */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition on hover */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.horizontal-card:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: scale(1.02); /* Slightly enlarged card on hover */
+}
+
+/* Image styling */
+.image-horizontal {
+  width: 100%; /* Full width of card */
+  height: 200px; /* Fixed height for the image */
+  object-fit: cover; /* Keep the aspect ratio */
+  margin-bottom: 7px; /* Space between image and content */
+  border-radius: 10px; /* Rounded image corners */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.image-horizontal:hover {
+  transform: none; /* Slight zoom on hover */
+}
+
+/* Description styling */
+.description {
+  text-align: center; /* Center-align text */
+}
+
+.description h2 {
+  font-size: 1rem; /* Adjust heading size */
+  margin-bottom: 15px;
+  color: #333; /* Dark text color for contrast */
+}
+
+.description p {
+  margin-bottom: 10px;
+  color: #555; /* Slightly lighter text color for paragraphs */
+  font-size: medium;
+}
+
+.description .btn {
+  background: linear-gradient(to right, #4a90e2 17%, #e94e77 100%);
+  color: white; /* Button text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  text-decoration: none;
+}
+
+.description .btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .horizontal-card {
+    max-width: 90%; /* Adjust width for tablets */
+    margin: 10px; /* Adjust margin for better spacing */
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    justify-content: center; /* Ensure cards are centered */
+  }
+
+  .horizontal-card {
+    max-width: 100%; /* Full width on small screens */
+    padding: 15px;
+  }
+
+  .image-horizontal {
+    height: 150px; /* Adjust height for smaller screens */
+    margin-bottom: 15px; /* Space between image and text */
+  }
+
+  .description {
+    text-align: center; /* Center-align description on small screens */
+  }
+}
+.featurette-heading{
+  text-align: center;
+  font-size: xx-large;
+}

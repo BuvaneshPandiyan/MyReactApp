@@ -1,0 +1,263 @@
+/* Container and Row Styles */
+.container {
+    margin-top: 1rem; /* Adjust top margin as needed */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 3.3rem;
+}
+
+.row {
+    margin-top: 1.5rem; /* Adjust top margin as needed */
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of columns */
+    gap: 1rem; /* Add gap between columns */
+}
+
+/* Base column styles for large screens */
+.col {
+    flex: 1 1 calc(33.333% - 1rem); /* Ensure three cards fit in a row */
+    max-width: calc(33.333% - 1rem); /* Ensure three cards fit in a row */
+    margin-bottom: 1rem; /* Reduced bottom margin */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Card Styles */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem; /* Increased border radius */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Updated transition duration */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure cards take up full height of their container */
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Set a specific height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Card Body Styles */
+.card-body {
+    padding: 1rem; /* Reduced padding */
+    background-color: #ffffff; /* Light background color */
+    flex: 1; /* Allows card-body to take up remaining space */
+    display: flex;
+    flex-direction: column; /* Aligns content vertically */
+    justify-content: space-between; /* Distributes space between elements */
+}
+
+.card-body h2 {
+    font-size: 1.125rem; /* Slightly larger font size */
+    margin-bottom: 0.75rem; /* Reduced bottom margin */
+}
+
+.card-body p {
+    font-size: 0.875rem; /* Reduced font size */
+    margin-bottom: 0.25rem; /* Reduced bottom margin */
+}
+
+.card-title {
+    font-size: 1.125rem; /* Slightly larger font size */
+    margin-bottom: 0.5rem;
+}
+
+#Price {
+    font-size: 1.2rem; /* Slightly larger font size */
+    font-weight: bold;
+}
+
+/* Button Container Styles */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Align buttons horizontally */
+    gap: 1rem; /* Increased gap between buttons */
+    margin-top: 1rem;
+}
+
+/* Button Styles */
+.button-container .btn {
+    color: white;
+    padding: 0.75rem 1.5rem; /* Adjusted padding */
+    border-radius: 0.5rem; /* Increased border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Updated transition duration */
+    border: none;
+    font-size: 1rem; /* Updated font size */
+    cursor: pointer; /* Ensure cursor is a pointer */
+}
+
+#addToCart {
+    background-color: #4a90e2; /* Restored blue color */
+}
+
+#addToCart:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.25); /* Slightly enlarged button on hover */
+    text-decoration: none;
+}
+
+#viewDetails {
+    background-color: #e94e77; /* Restored red color */
+}
+
+#viewDetails:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.25); /* Slightly enlarged button on hover */
+    text-decoration: none;
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: #333; /* Dark background */
+    color: #f1f1f1; /* Light text color */
+    border-radius: 1rem; /* Large border radius */
+    max-width: 80vw; /* Responsive width */
+    width: 600px; /* Fixed width */
+    height: auto; /* Auto height based on content */
+    max-height: 80vh; /* Maximum height to fit viewport */
+    overflow: hidden; /* Hide scrollbars */
+    margin: 2rem auto; /* Center the modal horizontally */
+    position: relative; /* For positioning of the scrollbar */
+}
+
+/* Modal Header */
+.modal-header {
+    background: #444; /* Darker header background */
+    color: #f1f1f1; /* Light text color */
+    padding: 1rem; /* Padding */
+    text-align: center;
+    border-bottom: 1px solid #555; /* Subtle bottom border */
+    border-top-left-radius: 1rem; /* Match modal border radius */
+    border-top-right-radius: 1rem; /* Match modal border radius */
+}
+
+/* Modal Title */
+.modal-title {
+    margin: 0;
+    font-size: 1.75rem; /* Larger title font size */
+}
+
+/* Close Button */
+.btn-close {
+    color: #f1f1f1; /* Light close button color */
+    opacity: 0.9; /* Slightly transparent */
+}
+
+.btn-close:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 2rem; /* Increased padding */
+    font-size: 1rem; /* Standard font size */
+    line-height: 1.6; /* Improved readability */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(80vh - 4rem); /* Account for header and footer height */
+}
+
+/* Hide scrollbar for Webkit browsers */
+.modal-body::-webkit-scrollbar {
+    width: 0; /* Hide scrollbar */
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: transparent; /* Hide scrollbar thumb */
+}
+
+/* Hide scrollbar for Firefox */
+.modal-body {
+    scrollbar-width: none; /* Hide scrollbar */
+}
+
+/* Modal Footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    border-top: 1px solid #555; /* Subtle top border */
+    background-color: #444; /* Dark footer background */
+    padding: 1rem; /* Padding */
+}
+
+/* Button Styles */
+.modal-footer .btn-primary {
+    background-color: #007bff; /* Blue background */
+    border-color: #007bff;
+    color: #f1f1f1; /* Light text color */
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d; /* Grey background */
+    border-color: #6c757d;
+    color: #f1f1f1; /* Light text color */
+    margin-left: 0.5rem; /* Space between buttons */
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #5a6268; /* Darker grey on hover */
+}
+
+/* Utility Classes */
+.mt-5 {
+    margin-top: 2rem;
+}
+
+.g-4 {
+    gap: 1rem;
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+.no-results {
+    text-align: center;
+}
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .col {
+        flex: 1 1 calc(50% - 1rem); /* Adjust to fit two cards per row */
+        max-width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .col {
+        flex: 1 1 100%; /* Single card per row */
+        max-width: 100%;
+    }
+
+    .card-img-top {
+        height: 150px; /* Adjust image height for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .card-body {
+        padding: 0.75rem; /* Adjust padding for smaller screens */
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: stretch; /* Stack buttons vertically */
+    }
+
+    .button-container .btn {
+        width: 100%; /* Make buttons full width on small screens */
+    }
+}
