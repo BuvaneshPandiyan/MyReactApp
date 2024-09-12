@@ -13,7 +13,7 @@ const Cart = () => {
 
     // Fetch cart items from the API
     const fetchCartItems = () => {
-        fetch('https://my-react-app-sable-gamma.vercel.app/cart')
+        fetch('http://localhost:8080/api/cart')
             .then((response) => response.json())
             .then((data) => {
                 const consolidatedItems = consolidateItems(data);
@@ -53,7 +53,7 @@ const Cart = () => {
 
     // Handle removing a cart item from the list
     const handleRemoveItem = (id) => {
-        fetch(`https://my-react-app-sable-gamma.vercel.app/cart/${id}`, {
+        fetch(`http://localhost:8080/api/cart/${id}`, {
             method: 'DELETE',
         })
         .then(() => {
@@ -66,7 +66,7 @@ const Cart = () => {
     // Handle decreasing the quantity of a cart item
     const handleDecreaseQuantity = (id, quantity, size) => {
         if (quantity > 1) {
-            fetch(`https://my-react-app-sable-gamma.vercel.app/cart${id}`, {
+            fetch(`http://localhost:8080/api/cart/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ const Cart = () => {
 
     // Handle increasing the quantity of a cart item
     const handleIncreaseQuantity = (id, quantity, size) => {
-        fetch(`https://my-react-app-sable-gamma.vercel.app/cart${id}`, {
+        fetch(`http://localhost:8080/api/cart/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ const Cart = () => {
 
     // Handle size selection
     const handleSizeChange = (id, size) => {
-        fetch(`https://my-react-app-sable-gamma.vercel.app/cart${id}`, {
+        fetch(`http://localhost:8080/api/cart/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
