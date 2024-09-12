@@ -8,7 +8,7 @@ const MenClothing = () => {
     // Fetch data from the API
     const fetchData = async () => {
       try {
-        const response = await fetch('https://2241-183-82-204-203.ngrok-free.app/api/clothing-items');
+        const response = await fetch('http://localhost:8080/api/clothing-items'); // Replace with your API endpoint
         const data = await response.json();
         // Filter items by category 'Men'
         const menItems = data.filter(item => item.category === 'Men');
@@ -23,18 +23,18 @@ const MenClothing = () => {
 
   // Function to handle adding items to the cart or updating quantity
   const addToCart = async (item) => {
-    const { id, name, imageUrl, price, category } = item;
+    const { id, name, imageUrl, price, category } = item; // Ensure category is included
 
     try {
       // Check if the item already exists in the cart
-      const response = await fetch('https://2241-183-82-204-203.ngrok-free.app/api/cart');
+      const response = await fetch('http://localhost:8080/api/cart'); // Get all cart items
       const existingItems = await response.json();
 
       const existingItem = existingItems.find(cartItem => cartItem.itemId === id);
 
       if (existingItem) {
         // Item exists, update quantity
-        await fetch(`https://2241-183-82-204-203.ngrok-free.app/api/cart/${existingItem.id}`, {
+        await fetch(`http://localhost:8080/api/cart/${existingItem.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ const MenClothing = () => {
         console.log(`${name} quantity updated to ${existingItem.quantity + 1}`);
       } else {
         // Item does not exist, add to cart
-        await fetch('https://2241-183-82-204-203.ngrok-free.app/api/cart', {
+        await fetch('http://localhost:8080/api/cart', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ const MenClothing = () => {
           <div className="col" key={item.id}>
             <div className="card">
               <img
-                src={item.imageUrl}
+                src={item.imageUrl} // Use the image URL from the API
                 className="card-img-top"
                 alt={item.name}
               />
@@ -90,8 +90,8 @@ const MenClothing = () => {
                     className="btn btn-dark hover-target"
                     id="addToCart"
                     onClick={(e) => {
-                      e.preventDefault();
-                      addToCart(item);
+                      e.preventDefault(); // Prevent default anchor behavior
+                      addToCart(item); // Pass the entire item object to addToCart
                     }}
                   >
                     Add to Cart
@@ -115,11 +115,13 @@ const MenClothing = () => {
                   aria-labelledby={`modal-${item.id}-Label`}
                   aria-hidden="true"
                 >
-                  <div className="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+                  <div
+                    className="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
+                  >
                     <div className="modal-content">
                       <div className="modal-header">
                         <h5 className="modal-title" id={`modal-${item.id}-Label`}>
-                          {item.title}
+                          {item.title} {/* Updated to use 'title' instead of 'name' */}
                         </h5>
                         <button
                           type="button"
@@ -129,7 +131,7 @@ const MenClothing = () => {
                         ></button>
                       </div>
                       <div className="modal-body">
-                        {item.modalBody}
+                        {item.modalBody} {/* Display modal body text */}
                       </div>
                       <div className="modal-footer">
                         <button
