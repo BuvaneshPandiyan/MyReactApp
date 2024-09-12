@@ -8,7 +8,7 @@ const MenClothing = () => {
     // Fetch data from the API
     const fetchData = async () => {
       try {
-        const response = await fetch('https://2241-183-82-204-203.ngrok-free.app/api/clothing-items'); // Replace with your API endpoint
+        const response = await fetch('https://2241-183-82-204-203.ngrok-free.app/api/clothing-items');
         const data = await response.json();
         // Filter items by category 'Men'
         const menItems = data.filter(item => item.category === 'Men');
@@ -23,11 +23,11 @@ const MenClothing = () => {
 
   // Function to handle adding items to the cart or updating quantity
   const addToCart = async (item) => {
-    const { id, name, imageUrl, price, category } = item; // Ensure category is included
+    const { id, name, imageUrl, price, category } = item;
 
     try {
       // Check if the item already exists in the cart
-      const response = await fetch('https://2241-183-82-204-203.ngrok-free.app/api/cart'); // Get all cart items
+      const response = await fetch('https://2241-183-82-204-203.ngrok-free.app/api/cart');
       const existingItems = await response.json();
 
       const existingItem = existingItems.find(cartItem => cartItem.itemId === id);
@@ -76,7 +76,7 @@ const MenClothing = () => {
           <div className="col" key={item.id}>
             <div className="card">
               <img
-                src={item.imageUrl} // Use the image URL from the API
+                src={item.imageUrl}
                 className="card-img-top"
                 alt={item.name}
               />
@@ -90,8 +90,8 @@ const MenClothing = () => {
                     className="btn btn-dark hover-target"
                     id="addToCart"
                     onClick={(e) => {
-                      e.preventDefault(); // Prevent default anchor behavior
-                      addToCart(item); // Pass the entire item object to addToCart
+                      e.preventDefault();
+                      addToCart(item);
                     }}
                   >
                     Add to Cart
@@ -115,13 +115,11 @@ const MenClothing = () => {
                   aria-labelledby={`modal-${item.id}-Label`}
                   aria-hidden="true"
                 >
-                  <div
-                    className="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
-                  >
+                  <div className="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
                     <div className="modal-content">
                       <div className="modal-header">
                         <h5 className="modal-title" id={`modal-${item.id}-Label`}>
-                          {item.title} {/* Updated to use 'title' instead of 'name' */}
+                          {item.title}
                         </h5>
                         <button
                           type="button"
@@ -131,7 +129,7 @@ const MenClothing = () => {
                         ></button>
                       </div>
                       <div className="modal-body">
-                        {item.modalBody} {/* Display modal body text */}
+                        {item.modalBody}
                       </div>
                       <div className="modal-footer">
                         <button
