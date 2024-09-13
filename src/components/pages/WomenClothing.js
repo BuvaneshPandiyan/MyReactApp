@@ -8,7 +8,7 @@ const WomenClothing = () => {
     // Fetch data from the API
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/clothing-items'); // Replace with your API endpoint
+        const response = await fetch('https://cce5-183-82-27-48.ngrok-free.app/api/clothing-items'); // Replace with your API endpoint
         const data = await response.json();
         // Filter items by category 'Women'
         const womenItems = data.filter(item => item.category === 'Women');
@@ -27,14 +27,14 @@ const WomenClothing = () => {
 
     try {
       // Check if the item already exists in the cart
-      const response = await fetch('http://localhost:8080/api/cart'); // Get all cart items
+      const response = await fetch('https://cce5-183-82-27-48.ngrok-free.app/api/cart'); // Get all cart items
       const existingItems = await response.json();
 
       const existingItem = existingItems.find(cartItem => cartItem.itemId === id);
 
       if (existingItem) {
         // Item exists, update quantity
-        await fetch(`http://localhost:8080/api/cart/${existingItem.id}`, {
+        await fetch(`https://cce5-183-82-27-48.ngrok-free.app/api/cart/${existingItem.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
