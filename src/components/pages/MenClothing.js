@@ -8,7 +8,7 @@ const MenClothing = () => {
     // Fetch data from the API
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/clothing-items'); // Replace with your API endpoint
+        const response = await fetch('https://urbanthreadapi.onrender.com/api/clothing-items'); // Replace with your API endpoint
         const data = await response.json();
         // Filter items by category 'Men'
         const menItems = data.filter(item => item.category === 'Men');
