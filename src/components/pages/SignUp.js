@@ -23,7 +23,7 @@ const SignUp = () => {
     setError(''); // Reset error message
 
     try {
-      const response = await fetch('http://localhost:8080/api/users', {
+      const response = await fetch('https://mark1-nf8t.onrender.com/api/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
