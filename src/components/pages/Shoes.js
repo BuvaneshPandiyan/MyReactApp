@@ -152,7 +152,6 @@ const Shoes = () => {
             </div>
           ))
         ) : (
-          <p>No items available.</p>
         )}
       </div>
     </div>
