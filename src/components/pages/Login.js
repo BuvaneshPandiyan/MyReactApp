@@ -17,7 +17,7 @@ const Login = () => {
 
     try {
       // Fetch the users from the existing `user` API
-      const response = await fetch('http://localhost:8080/api/users'); // Adjust URL to your API
+      const response = await fetch('https://mark1-nf8t.onrender.com/api/users'); // Adjust URL to your API
       const users = await response.json();
 
       // Check if the entered credentials match any user
