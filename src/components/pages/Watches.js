@@ -153,7 +153,7 @@ const Watches = () => {
             </div>
           ))
         ) : (
-          <p>No items available.</p>
+          <p>...Loading...</p>
         )}
       </div>
     </div>
