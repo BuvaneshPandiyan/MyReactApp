@@ -10,7 +10,7 @@ const SearchResults = () => {
     const fetchData = async () => {
       try {
         // Ensure the API endpoint is correct and supports searching
-        const response = await fetch(`http://localhost:8080/api/clothing-items?search=${encodeURIComponent(query)}`); // Replace with your API endpoint
+        const response = await fetch(`https://mark1-nf8t.onrender.com/api/clothing-items?search=${encodeURIComponent(query)}`); // Replace with your API endpoint
         const data = await response.json();
 
         // Filter items based on the search query
