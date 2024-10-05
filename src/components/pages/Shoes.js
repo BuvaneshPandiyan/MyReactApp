@@ -151,7 +151,7 @@ const Shoes = () => {
               </div>
             </div>
           ))
-        ) : (
+        ) : (<p>No Shoes Available.<p/>
         )}
       </div>
     </div>
