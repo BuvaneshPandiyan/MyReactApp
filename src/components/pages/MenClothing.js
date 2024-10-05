@@ -27,14 +27,14 @@ const MenClothing = () => {
 
     try {
       // Check if the item already exists in the cart
-      const response = await fetch('http://localhost:8080/api/cart'); // Get all cart items
+      const response = await fetch('https://mark1-nf8t.onrender.com/api/cart'); // Get all cart items
       const existingItems = await response.json();
 
       const existingItem = existingItems.find(cartItem => cartItem.itemId === id);
 
       if (existingItem) {
         // Item exists, update quantity
-        await fetch(`http://localhost:8080/api/cart/${existingItem.id}`, {
+        await fetch(`https://mark1-nf8t.onrender.com/api/cart/${existingItem.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ const MenClothing = () => {
         console.log(`${name} quantity updated to ${existingItem.quantity + 1}`);
       } else {
         // Item does not exist, add to cart
-        await fetch('http://localhost:8080/api/cart', {
+        await fetch('https://mark1-nf8t.onrender.com/api/cart', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
