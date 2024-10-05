@@ -5,7 +5,6 @@ const Layout =() =>{
     return (
         <header className="layout-content">
         <div className="layout-content">
-            <Link to="/categories" className='layout-brand'>Categories</Link>
             <Link to="/mensclothing" className='layout-brand'>Men's Clothing</Link>
             <Link to="/womensclothing" className='layout-brand'>Women's Clothing</Link>
             <Link to="/kidsclothing" className='layout-brand'>Kid's Clothing</Link>
