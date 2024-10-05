@@ -31,7 +31,7 @@ const App = () => {
         <div className="flex-fill"> {/* Allows main content to grow */}
           <Layout /> {/* Optional if Layout contains additional structure */}
           <Routes>
-            <Route path="/" element={<Categories />} />
+            <Route path="/" element={<MenClothing />} />
             <Route path='categories' element={<Categories />} />
             <Route path='mensclothing' element={<MenClothing />} />
             <Route path='womensclothing' element={<WomenClothing searchTerm={searchTerm} />} />
